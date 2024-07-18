@@ -1,0 +1,23 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $alt-font-color;
+  }
+  
+  .login-container {
+    max-width: 300px;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid $light-font-color;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #1c1c1c;
+  }
+  
+  .login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $light-font-color;
+  }
