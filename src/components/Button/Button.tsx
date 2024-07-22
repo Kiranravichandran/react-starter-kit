@@ -9,7 +9,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ inputText, outputEvent }) => {
   const { emit } = useEvent();
   const handleClick = () => {
-    emit('ButtonClickEvent', "Button clicked");
+    emit('ButtonClickEvent', {user:"kiran"});
     outputEvent("Button clicked");
   };
   return (
