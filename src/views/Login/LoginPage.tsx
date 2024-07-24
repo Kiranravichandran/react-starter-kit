@@ -16,16 +16,26 @@ const LoginPage: React.FC = () => {
   };
 
   const handleButtonEvent = (data: any) => {
-      console.log(userName, password);
-      console.log('Button Clicked:', data);
+    console.log(userName, password);
+    console.log('Button Clicked:', data);
   };
 
   return (
     <div className="login-page">
       <div className="login-container">
         <EventProvider>
-          <TextField inputLabel="Username" inputType="text" inputValue={userName} outputChange={handleUserNameChange}/>
-          <TextField inputLabel="Password" inputType="password" inputValue={password} outputChange={handlePasswordChange}/>
+          <TextField
+            inputLabel="Username"
+            inputType="text"
+            inputValue={userName}
+            outputChange={handleUserNameChange}
+          />
+          <TextField
+            inputLabel="Password"
+            inputType="password"
+            inputValue={password}
+            outputChange={handlePasswordChange}
+          />
           <Button inputText="Login" outputEvent={handleButtonEvent} />
         </EventProvider>
       </div>
