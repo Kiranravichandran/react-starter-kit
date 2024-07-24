@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Button from '../../components/Button/Button';
 import TextField from '../../components/TextField/TextField';
 
-
-
 const SignUpPage: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -16,13 +14,28 @@ const SignUpPage: React.FC = () => {
 
   return (
     <div className="login-page">
-    <div className="login-container">
-      <TextField label="Username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-      <TextField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <TextField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <Button text="SignUp" onClick={handleLogin} />
+      <div className="login-container">
+        <TextField
+          inputLabel="Username"
+          inputType="text"
+          inputValue={username}
+          outputChange={(e) => setUsername(e.target.value)}
+        />
+        <TextField
+          inputLabel="Password"
+          inputType="password"
+          inputValue={password}
+          outputChange={(e) => setPassword(e.target.value)}
+        />
+        <TextField
+          inputLabel="Password"
+          inputType="password"
+          inputValue={password}
+          outputChange={(e) => setPassword(e.target.value)}
+        />
+        <Button inputText="SignUp" outputEvent={handleLogin} />
+      </div>
     </div>
-  </div>
   );
 };
 

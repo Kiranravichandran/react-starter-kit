@@ -7,11 +7,21 @@ interface TextFieldProps {
   outputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const TextField: React.FC<TextFieldProps> = ({ inputLabel, inputType, inputValue, outputChange }) => {
+const TextField: React.FC<TextFieldProps> = ({
+  inputLabel,
+  inputType,
+  inputValue,
+  outputChange,
+}) => {
   return (
     <div className="form-group">
       <label>{inputLabel}</label>
-      <input type={inputType} value={inputValue} onChange={outputChange} required />
+      <input
+        type={inputType}
+        value={inputValue}
+        onChange={outputChange}
+        required
+      />
     </div>
   );
 };

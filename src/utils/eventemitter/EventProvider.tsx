@@ -10,13 +10,15 @@ interface EventContextType {
 
 const EventContext = createContext<EventContextType | undefined>(undefined);
 
-export const EventProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const EventProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const listenersRef = useRef<Map<string, Set<EventListener>>>(new Map());
 
   const emit = (event: string, data: any) => {
     const listeners = listenersRef.current.get(event);
     if (listeners) {
-      listeners.forEach(listener => listener(data));
+      listeners.forEach((listener) => listener(data));
     }
   };
 
