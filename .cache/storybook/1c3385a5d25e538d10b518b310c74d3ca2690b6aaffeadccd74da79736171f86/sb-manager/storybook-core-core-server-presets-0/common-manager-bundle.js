@@ -1,1 +1,1 @@
-import '/Users/kiranr/Wellness Way/neo-frontend/node_modules/@storybook/core/dist/core-server/presets/common-manager.js';
+import '/Users/kiranr/Wellness Way/neo-frontend/react-starter-kit/node_modules/@storybook/core/dist/core-server/presets/common-manager.js';

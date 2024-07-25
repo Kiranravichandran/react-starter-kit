@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../../components/Button/Button';
 import TextField from '../../components/TextField/TextField';
+import { EventProvider } from '../../utils/eventemitter/EventProvider';
 
 const SignUpPage: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -15,25 +16,27 @@ const SignUpPage: React.FC = () => {
   return (
     <div className="login-page">
       <div className="login-container">
-        <TextField
-          inputLabel="Username"
-          inputType="text"
-          inputValue={username}
-          outputChange={(e) => setUsername(e.target.value)}
-        />
-        <TextField
-          inputLabel="Password"
-          inputType="password"
-          inputValue={password}
-          outputChange={(e) => setPassword(e.target.value)}
-        />
-        <TextField
-          inputLabel="Password"
-          inputType="password"
-          inputValue={password}
-          outputChange={(e) => setPassword(e.target.value)}
-        />
-        <Button inputText="SignUp" outputEvent={handleLogin} />
+        <EventProvider>
+          <TextField
+            inputLabel="Username"
+            inputType="text"
+            inputValue={username}
+            outputChange={(e) => setUsername(e.target.value)}
+          />
+          <TextField
+            inputLabel="Password"
+            inputType="password"
+            inputValue={password}
+            outputChange={(e) => setPassword(e.target.value)}
+          />
+          <TextField
+            inputLabel="Password"
+            inputType="password"
+            inputValue={password}
+            outputChange={(e) => setPassword(e.target.value)}
+          />
+          <Button inputText="SignUp" outputEvent={handleLogin} />
+        </EventProvider>
       </div>
     </div>
   );

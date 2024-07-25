@@ -1,1 +1,1 @@
-import '/Users/kiranr/Wellness Way/neo-frontend/node_modules/@storybook/addon-essentials/dist/actions/manager.js';
+import '/Users/kiranr/Wellness Way/neo-frontend/react-starter-kit/node_modules/@storybook/addon-essentials/dist/actions/manager.js';

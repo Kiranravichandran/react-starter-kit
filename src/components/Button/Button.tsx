@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEvent } from '../../utils/eventemitter/EventProvider';
 
-interface ButtonProps {
+export interface ButtonProps {
   inputText: string;
   outputEvent: (data: any) => void;
 }

@@ -1,1 +1,1 @@
-import '/Users/kiranr/Wellness Way/neo-frontend/node_modules/@chromatic-com/storybook/dist/manager.mjs';
+import '/Users/kiranr/Wellness Way/neo-frontend/react-starter-kit/node_modules/@chromatic-com/storybook/dist/manager.mjs';
